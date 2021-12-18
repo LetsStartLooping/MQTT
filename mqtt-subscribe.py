@@ -15,12 +15,10 @@ client = mqtt.Client("Test-MQTT")
 # Connect the client to the broker
 client.connect(mqtt_broker) #connect to broker
 
-## MQTT Topic to be publish to
-mqtt_topic = input("Please enter MQTT Topic name to which you want to publish a message: ")
+## MQTT Topic to be Subscribe to
+mqtt_topic = input("Please enter MQTT Topic name to which you want to Subscribe to: ")
 
-## Message to be publis
-mqtt_message = input(f"Please entere a message for topic {mqtt_topic}: ")
+# Subscribe to the MQTT topic
+client.subscribe(mqtt_topic)
 
-# Publish MQTT message to the topic
-client.publish(mqtt_topic,mqtt_message)
-print("Message published")
+# Run a loop and check through coming MQTT messages for the topic
