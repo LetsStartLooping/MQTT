@@ -18,3 +18,9 @@ pip3 install paho-mqtt
 import paho.mqtt.client as mqtt
 ```
 
+As next step we can crate a client using following command, and give it a unique name of your choice
+
+```python
+client = mqtt.Client("Test-MQTT") 
+```
+
