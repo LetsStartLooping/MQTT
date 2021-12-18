@@ -1,6 +1,8 @@
 # MQTT in Python
 
-### Install MQTT client for Python with one of the following options
+### Install MQTT client library
+
+To work with MQTT in Python we can use one of the following options based on the current `pip` version your system is using
 
 ```shell
 pip install paho-mqtt
@@ -12,7 +14,7 @@ or
 pip3 install paho-mqtt
 ```
 
-#### Import Library
+Import Library to perform MQTT operations
 
 ```python
 import paho.mqtt.client as mqtt
