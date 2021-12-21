@@ -54,4 +54,4 @@ As an example if a topic name is "home/temperature" and value of the temperature
 client.publish("home/temperature", "23.4")
 ```
 
-Here is the [link](https://github.com/LetsStartLooping/MQTT/blob/84c2592375d3e74dd7483945f89ffe5954b66dc8/mqtt-publish.py) to sample complete working code to publish a message to MQTT client
+Here is the [link](https://github.com/LetsStartLooping/MQTT/blob/5d0260a2e90e2cf4d1214ee04fb3810cc225a430/mqtt-publish.py) to sample complete working code to publish a message to MQTT client
