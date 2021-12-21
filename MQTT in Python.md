@@ -14,6 +14,8 @@ or
 pip3 install paho-mqtt
 ```
 
+### Connect to MQTT Broker
+
 1. Import Library to perform MQTT operations
 
 ```python
@@ -32,7 +34,15 @@ client = mqtt.Client("T	est-MQTT")
 client.connect(mqtt_broker)
 ```
 
-4. To publish a MQTT message we need an MQTT topic and the message we want to publish. Following simple command can be used for the same. Here `mqtt_topic` is a string which is name of the topic and `mqtt_message` is another string which contains the message we want to publish to `mqtt_topic`.
+4. Following step is optional if MQTT Broker is protected by user-id and password
+
+```
+client.username_pw_set(user_name, password)
+```
+
+### Publish MQTT Message
+
+To publish a MQTT message we need an MQTT topic and the message we want to publish. Following simple command can be used for the same. Here `mqtt_topic` is a string which is name of the topic and `mqtt_message` is another string which contains the message we want to publish to `mqtt_topic`.
 
 ```python
 client.publish(mqtt_topic, mqtt_message)
