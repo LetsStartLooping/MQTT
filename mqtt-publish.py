@@ -12,6 +12,18 @@ if mqtt_broker == "X.X.X.X":
 # Any name can be used here
 client = mqtt.Client("Test-MQTT") 
 
+# Check with user if MQTT Broker requires User ID/Password
+protected_broker = input("Is your MQTT client requires User ID/Password? (Y/n) :")
+
+if protected_broker == 'Y' or protected_broker == 'y':
+    user_name = input("Please Enter User ID: ")
+    password = input("Password for the MQTT client: ")
+
+    # Set user name and password if MQTT client is set-up with one
+    # Else following line of code is not required
+    client.username_pw_set(user_name, password)
+
+
 # Connect the client to the broker
 client.connect(mqtt_broker) #connect to broker
 
@@ -22,5 +34,5 @@ mqtt_topic = input("Please enter MQTT Topic name to which you want to publish a 
 mqtt_message = input(f"Please entere a message for topic {mqtt_topic}: ")
 
 # Publish MQTT message to the topic
-client.publish(mqtt_topic,mqtt_message)
+client.publish(mqtt_topic, mqtt_message)
 print("Message published")

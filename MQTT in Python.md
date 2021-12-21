@@ -23,7 +23,7 @@ import paho.mqtt.client as mqtt
 2. As next step we can crate a client using following command, and give it a unique name of your choice
 
 ```python
-client = mqtt.Client("Test-MQTT") 
+client = mqtt.Client("T	est-MQTT") 
 ```
 
 3. Connect the client to the MQTT Broker, MQTT broker is the name of the broker or the IP address of the MQTT broker device. This could running at your local Raspberry Pi or MQTT broker running on AWS
