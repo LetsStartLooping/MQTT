@@ -1,6 +1,6 @@
 # MQTT via Command Line (mosquitto_pub & mosquitto_sub)
 
-This section introduces how to use `mosquitto_sub` and `mosquitto_pub` to Subscribe and Publish MQTT messages
+This is a small guide on how to use `mosquitto_sub` and `mosquitto_pub` to Subscribe and Publish MQTT messages
 
 Let's take the example where we will be using following MQTT details
 
@@ -15,7 +15,7 @@ Optional Parameters: If MQTT broker is password protected then we also need to p
 
 ## Subscribe to a topic in MQTT
 
-We can use following command to subscribe to a topic. Here I will be using datails from the above example we have taken
+We can use following command to subscribe to a topic. Here I will be using details from the above example we have taken
 
 ```bash
 mosquitto_sub -h 192.168.1.24 -t room/temperature 
@@ -42,7 +42,7 @@ Publishing a message to a topic in MQTT is quite similar and that can be done by
 mosquitto_pub -h 192.168.1.24 -p 1883 -t room/temperature  -u USER01 -P test1234 -m "23.45"
 ```
 
-### Diferent Options used along with these commands
+### Different Options used along with these commands
 
 Options | Details
 --- | ---
