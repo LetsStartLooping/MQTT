@@ -9,8 +9,20 @@ if mqtt_broker == "X.X.X.X":
     mqtt_broker = input("Please enter the address of the MQTT Broker: ")
 
 # Create new instance of the MQTT client
-# Any name can be used here
+# Any name can be used here - But each client should have a unique name
 client = mqtt.Client("Test-MQTT") 
+
+# Check with user if MQTT Broker requires User ID/Password
+protected_broker = input("Is your MQTT client requires User ID/Password? (Y/n) :")
+
+if protected_broker == 'Y' or protected_broker == 'y':
+    user_name = input("Please Enter User ID: ")
+    password = input("Password for the MQTT client: ")
+
+    # Set user name and password if MQTT client is set-up with one
+    # Else following line of code is not required
+    client.username_pw_set(user_name, password)
+
 
 # Connect the client to the broker
 client.connect(mqtt_broker) #connect to broker

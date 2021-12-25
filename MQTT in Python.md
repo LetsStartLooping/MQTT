@@ -36,7 +36,7 @@ client.connect(mqtt_broker)
 
 4. Following step is optional if MQTT Broker is protected by user-id and password
 
-```
+```python
 client.username_pw_set(user_name, password)
 ```
 
@@ -55,3 +55,22 @@ client.publish("home/temperature", "23.4")
 ```
 
 Here is the [link](https://github.com/LetsStartLooping/MQTT/blob/5d0260a2e90e2cf4d1214ee04fb3810cc225a430/mqtt-publish.py) to sample complete working code to publish a message to MQTT client
+
+### Subscribe to MQTT Topic
+
+To subscribe to a MQTT Topic following command can be used in python. Once this is done, then any message published by any client to this topic will be received by the client subscribed to a perticular MQTT topic
+
+```python
+# Subscribe to the MQTT topic
+client.subscribe(mqtt_topic)
+```
+
+For example, if a client is subscribed to the topic "home/temperature". Then it will receive the above published message of "23.4"
+
+```python
+client.subscribe("home/temperature")
+```
+
+### Listen to MQTT Messages
+
+Just subscribing to MQTT messages is not enough, we also need a way to receive and decode the incoming MQTT topics and messages.
