@@ -4,14 +4,14 @@ This section introduces how to use `mosquitto_sub` and `mosquitto_pub` to Subscr
 
 Let's take the example where we will be using following MQTT details
 
-`broker_address`: Name or IP address of the MQTT Broker. e.g. 192.168.1.24
-`topic`: Name of the topic we want to subscribe and send message. e.g. `room/temperature`
-`message`: This is our message which can be any string or json message. e.g. `23.45`
+* `broker_address`: Name or IP address of the MQTT Broker. e.g. 192.168.1.24
+* `topic`: Name of the topic we want to subscribe and send message. e.g. `room/temperature`
+* `message`: This is our message which can be any string or json message. e.g. `23.45`
 
 Optional Parameters: If MQTT broker is password protected then we also need to provide User ID and password details while subscribing to publishing messages
 
-`user_id`: A valid UserID for MQTT Broker. e.g. `USER01`
-`password`: Password for the above user id. e.g. `test1234`
+* `user_id`: A valid UserID for MQTT Broker. e.g. `USER01`
+* `password`: Password for the above user id. e.g. `test1234`
 
 ## Subscribe to a topic in MQTT
 
