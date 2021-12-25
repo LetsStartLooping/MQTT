@@ -4,7 +4,7 @@
 
 To work with MQTT in Python we can use one of the following options based on the current `pip` version your system is using
 
-```shell
+```bash
 pip install paho-mqtt
 ```
 
@@ -25,7 +25,7 @@ import paho.mqtt.client as mqtt
 2. As next step we can crate a client using following command, and give it a unique name of your choice
 
 ```python
-client = mqtt.Client("T	est-MQTT") 
+client = mqtt.Client("Test-MQTT") 
 ```
 
 3. Connect the client to the MQTT Broker, MQTT broker is the name of the broker or the IP address of the MQTT broker device. This could running at your local Raspberry Pi or MQTT broker running on AWS
@@ -54,7 +54,7 @@ As an example if a topic name is "home/temperature" and value of the temperature
 client.publish("home/temperature", "23.4")
 ```
 
-Here is the [link](https://github.com/LetsStartLooping/MQTT/blob/5d0260a2e90e2cf4d1214ee04fb3810cc225a430/mqtt-publish.py) to sample complete working code to publish a message to MQTT client
+Here is the [link](mqtt-publish.py) to sample complete working code to publish a message to MQTT client
 
 ### Subscribe to MQTT Topic
 
