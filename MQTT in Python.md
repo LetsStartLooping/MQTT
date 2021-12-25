@@ -73,6 +73,6 @@ client.subscribe("home/temperature")
 
 ### Listen to MQTT Messages
 
-Just subscribing to MQTT messages is not enough, we also need a way to receive and decode the incoming MQTT topics and messages.
+Just subscribing to a topic in MQTT messages is not enough, we also need a way to receive and decode the incoming MQTT topics and messages.
 
 **This Page is under construction**
