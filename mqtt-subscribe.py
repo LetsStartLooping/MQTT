@@ -2,6 +2,8 @@
 import paho.mqtt.client as mqtt 
 from time import sleep
 
+msg = ""
+
 # This function gets called when we try to connect to MQTT Broker
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
@@ -16,7 +18,9 @@ def on_connect(client, userdata, flags, rc):
 
 # This function gets called when cleint receives an MQTT message for a topic client is subscribed to
 def on_message(client, userdata, message):
-    print("Message Received: ", str(message.payload.decode("utf-8")), " for topic: ", str(message.topic))
+    global msg
+    # print("Message Received: ", str(message.payload.decode("utf-8")), " for topic: ", str(message.topic))
+    msg = str(message.payload.decode("utf-8"))
 
 # IP Address of the MQTT Broker
 mqtt_broker ="X.X.X.X" 
@@ -50,7 +54,14 @@ mqtt_topic = input("Please enter MQTT Topic name to which you want to Subscribe 
 # Connect the client to the broker
 client.connect(mqtt_broker) #connect to broker
 
-client.loop_forever()
+# client.loop_forever()
+client.loop_start()
+sleep(2)
+
+while True:
+    if msg != "":
+        print(msg)
+        msg = ""
 
 
 
